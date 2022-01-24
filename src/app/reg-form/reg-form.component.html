@@ -1,0 +1,69 @@
+<form [formGroup]="myForm">
+    <div class="container">
+        <h1>REGISTRATION FORM</h1>
+        <div>
+            <label for="id">ID:</label>
+            <input type="text" pInputText formControlName="id"/>
+            </div>
+            <div>
+            <label for="name">NAME:</label>
+            <input type="text" pInputText formControlName="name"/>
+            </div>
+            <div>
+           <label for="psd">PASSWORD:</label>
+            <input type="password" pInputText formControlName="password"/>
+            </div>
+            <label>GENDER</label>
+            <div class="gap1">
+              <div class="p-field-radiobutton">
+                  <p-radioButton value="male" 
+                                   [(ngModel)]=" fig" 
+                                 inputId=" fig1">
+                  </p-radioButton>
+                  <label for=" fig1">MALE</label>
+                </div>
+                <div class="p-field-radiobutton">
+                  <p-radioButton value="male" 
+                                 [(ngModel)]=" fig" 
+                                 inputId=" fig2">
+                  </p-radioButton>
+                  <label for=" fig2">FEMALE</label>
+                </div>
+            <div>
+            <label>CITIES:</label>
+            <div class="gap">
+                <div class="p-field-checkbox" >
+                    <p-checkbox name="group1" value="hyderabad" [(ngModel)]="selectedCities" inputId="hyd"></p-checkbox>
+                    <label for="hyd">HYDERABAD</label>
+                </div>
+                <div class="p-field-checkbox">
+                    <p-checkbox name="group1" value="mumbai" [(ngModel)]="selectedCities" inputId="mum"></p-checkbox>
+                    <label for="mum">MUMBAI</label>
+                </div>
+                <div class="p-field-checkbox">
+                    <p-checkbox name="group1" value="cheenai" [(ngModel)]="selectedCities" inputId="ch"></p-checkbox>
+                    <label for="ch">CHEENAI</label>
+                </div>
+                <div class="p-field-checkbox">
+                    <p-checkbox name="group1" value="delhi" [(ngModel)]="selectedCities" inputId="del"></p-checkbox>
+                    <label for="del">DELHI</label>
+                </div>
+            </div>
+            
+        <span>
+        ARE YOU REALLY ACCEPT:
+        <p-inputSwitch [(ngModel)]="one"></p-inputSwitch>
+    </span>
+    <div>
+    TEXT AREA:
+    <textarea rows="4" cols="35" pInputTextarea></textarea>
+    </div>
+   
+      
+      <button pButton type="button" label="save" class="p-button-primary"></button>
+  </div>
+    </div>
+    </div>
+    
+    </form>
+    
